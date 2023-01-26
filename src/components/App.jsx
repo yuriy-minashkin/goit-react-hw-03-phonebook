@@ -7,10 +7,10 @@ import css from './App.module.css';
 export class App extends Component {
   state = {
     contacts: [
-      { id: 'id-1', name: 'Annie Copeland', number: '227-91-26' },
-      { id: 'id-2', name: 'Eden Clements', number: '645-17-79' },
-      { id: 'id-3', name: 'Hermione Kline', number: '443-89-12' },
-      { id: 'id-4', name: 'Rosie Simpson', number: '459-12-56' },
+      { id: 'id-1', name: 'Anton Chigur', number: '227-91-26' },
+      { id: 'id-2', name: 'Patrick Bateman', number: '645-17-79' },
+      { id: 'id-3', name: 'Tony Montana', number: '443-89-12' },
+      { id: 'id-4', name: 'Raul Duke', number: '459-12-56' },
     ],
     filter: '',
   };

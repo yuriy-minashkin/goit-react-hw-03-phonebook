@@ -17,12 +17,12 @@ export const ContactList = ({ contacts, contactDelHandler }) => {
 };
 
 ContactList.propTypes = {
-  contacts: PropTypes.arrayOff(
+  contacts: PropTypes.arrayOf(
     PropTypes.shape({
-      id: PropTypes.string.isRequired,
-      name: PropTypes.string.isRequired,
-      number: PropTypes.number.isRequired,
-    })
+      id: PropTypes.string,
+      name: PropTypes.string,
+      number: PropTypes.string,
+    }).isRequired
   ) ,
   contactDelHandler: PropTypes.func.isRequired,
 };
