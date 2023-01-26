@@ -1,0 +1,37 @@
+.item {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  margin: 0 40px;
+  border-bottom: 2px dotted rgb(219, 216, 216);
+}
+
+.item:not(:last-child) {
+  margin-bottom: 10px;
+}
+
+span {
+  font-weight: 500;
+}
+
+.button {
+  font-size: 16px;
+  font-weight: 700;
+  min-width: 80px;
+  border: none;
+  border-radius: 4px;
+  box-shadow: 1px 2px 4px 2px #cbc7c7da;
+  color: rgba(0, 0, 0, 0.6);
+  background-color: rgb(185, 185, 160);
+  padding: 5px 10px;
+  cursor: pointer;
+}
+
+.button:hover {
+  background-color: rgb(138, 138, 138);
+}
+
+.button:active {
+  color: rgba(0, 0, 0, 0.7);
+  background-color: rgb(103, 103, 103);
+}
