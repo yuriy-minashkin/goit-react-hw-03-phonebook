@@ -6,13 +6,21 @@ import css from './App.module.css';
 
 export class App extends Component {
   state = {
-    contacts: [
-      { id: 'id-1', name: 'Anton Chigur', number: '227-91-26' },
-      { id: 'id-2', name: 'Patrick Bateman', number: '645-17-79' },
-      { id: 'id-3', name: 'Tony Montana', number: '443-89-12' },
-      { id: 'id-4', name: 'Raul Duke', number: '459-12-56' },
-    ],
+    contacts: [],
     filter: '',
+  };
+
+  componentDidMount() {
+    const localStorageData = JSON.parse(localStorage.getItem("contacts"));
+    if (localStorageData) {
+      this.setState({contacts: localStorageData})
+    };
+  };
+
+  componentDidUpdate(_, prevState) {
+    if (this.state.contacts !== prevState.contacts) {
+      return localStorage.setItem("contacts", JSON.stringify(this.state.contacts));
+    };
   };
 
   updateFilterInput = (event) => {
@@ -28,7 +36,6 @@ export class App extends Component {
 
   addNewContact = newContactObj => {
     const newName = newContactObj.name;
-    console.log(newContactObj)
 
     this.state.contacts.some(
       contact => contact.name.toLowerCase() === newName.toLowerCase()
